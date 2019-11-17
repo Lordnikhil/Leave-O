@@ -1,4 +1,4 @@
-## Leave-O 
+## Leave-O App
 
 ### Run the project
 Install the dependencies:
