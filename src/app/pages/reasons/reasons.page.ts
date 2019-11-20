@@ -16,7 +16,7 @@ export class ReasonsPage implements OnInit {
   messageBody: string = "Message";
 
   constructor(private appLauncher: AppLauncher, private platform: Platform, private emailComposer: EmailComposer) {
-    this.reasonsPageTitle = "Whats your reason?";
+    this.reasonsPageTitle = "";
    }
 
   ngOnInit() {

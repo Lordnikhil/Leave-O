@@ -1,8 +1,14 @@
-<header [title]="reasonsPageTitle"></header>
+<header [title]=""></header>
 <ion-content>
+  <div class="ion-padding">Whats your reason?</div>
     <ion-list>
-        <ion-item (click)="generateEmail()" tappable>
+        <ion-item (click)="generateEmail()" color="primary" lines="none" button>
           <ion-label>Common Cold</ion-label>
+          <ion-icon name="snow" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item (click)="generateEmail()" color="primary" lines="none" button>
+          <ion-label>Fever</ion-label>
+          <ion-icon name="thermometer" slot="end"></ion-icon>
         </ion-item>
     </ion-list>
 </ion-content>

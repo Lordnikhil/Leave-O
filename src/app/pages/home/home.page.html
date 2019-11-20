@@ -1,32 +1,24 @@
-<header [title]="homePageTitle"></header>
+<header [title]=""></header>
 
 <ion-content>
   <div class="ion-padding">
     Welcome, Dont feel like going to office today? Please Select which leave you want to apply
   </div>
 
-  <ion-card routerLink="/reasons-page" tappable>
-    <img src="../../assets/images/_ionicons_svg_md-medkit.svg" class="card-image">
+  <ion-card routerLink="/reasons-page" color="primary" button>
+    <!-- <img src="../../assets/images/_ionicons_svg_md-medkit.svg" class="card-image"> -->
     <ion-card-header>
       <ion-card-subtitle>Not feeling well?</ion-card-subtitle>
       <ion-card-title>Sick Leave</ion-card-title>
     </ion-card-header>
-  
-    <ion-card-content>
-
-    </ion-card-content>
   </ion-card>
 
-  <ion-card (click)="goToReasonsPage('cl')" tappable>
-    <img src="../../assets/images/_ionicons_svg_md-happy.svg" class="card-image">
+  <ion-card (click)="goToReasonsPage('cl')" color="primary" button>
+    <!-- <img src="../../assets/images/_ionicons_svg_md-happy.svg" class="card-image"> -->
     <ion-card-header>
       <ion-card-subtitle>Feel like bunking?</ion-card-subtitle>
       <ion-card-title>Casual Leave</ion-card-title>
     </ion-card-header>
-  
-    <ion-card-content>
-
-    </ion-card-content>
   </ion-card>
 
 </ion-content>

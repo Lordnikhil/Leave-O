@@ -16,7 +16,7 @@ export class HomePage {
   subscription: any;
 
   constructor(public navCtrl: NavController, private statusBar: StatusBar, private platform: Platform) {
-    this.homePageTitle = "Leave - O";
+    this.homePageTitle = "";
     this.statusBarColor = "#C0C0C0"; //white #ffffff
     this.statusBar.backgroundColorByHexString(this.statusBarColor);
   }
