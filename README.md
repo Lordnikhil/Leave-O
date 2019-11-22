@@ -1,4 +1,4 @@
-## Leave-O App
+## Leave-O Demo App
 
 ### Run the project
 Install the dependencies:
@@ -6,3 +6,5 @@ Install the dependencies:
 
 Run the project:
 `ionic serve`
+
+Best viewed in Chrome device mode.
