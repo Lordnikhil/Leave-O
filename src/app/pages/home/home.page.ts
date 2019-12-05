@@ -17,7 +17,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, private statusBar: StatusBar, private platform: Platform) {
     this.homePageTitle = "";
-    this.statusBarColor = "#C0C0C0"; //white #ffffff
+    this.statusBarColor = "#ffffff"; //white #ffffff
     this.statusBar.backgroundColorByHexString(this.statusBarColor);
   }
 
@@ -35,19 +35,8 @@ export class HomePage {
     
   }
 
-  goToReasonsPage(reason){
-    console.log(reason);
-    if(reason == "sl"){
-      //nav.push(ReasonsPage,{reason : 'sick'});
-    }
-
-    else if(reason == "cl"){
-
-    }
-
-    else{
-
-    }
+  showAlert(){
+    alert("Please select the other option");
   }
 
 }

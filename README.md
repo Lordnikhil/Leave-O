@@ -4,7 +4,10 @@
 Install the dependencies:
 `npm install`
 
-Run the project:
+To run the project in Google Chome:
 `ionic serve`
 
-Best viewed in Chrome device mode.
+To run the project in Android Virtual Device
+`ionic cordova run android -l`
+
+Best viewed in Chrome device mode and Android Studio Virtual Device.

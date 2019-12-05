@@ -12,14 +12,24 @@ export class ReasonsPage implements OnInit {
 
   reasonsPageTitle: string = "";
 
-  messageSubject: string = "Subject";
-  messageBody: string = "Message";
+  messageSubject: string = "Sick Leave";
+  messageBody: string = "<!DOCTYPE html> <html> <head> </head> <body> <p>Hello Sir/Madam,</p> <p>I&rsquo;m emailing to inform you that I can&rsquo;t make it to work today, as I&rsquo;ve come down with cold. I'll be available to answer emails if you need urgent help.</p> <p>Thank you.</p> </body> </html>";
+  IsCalling: boolean;
 
   constructor(private appLauncher: AppLauncher, private platform: Platform, private emailComposer: EmailComposer) {
     this.reasonsPageTitle = "";
    }
 
   ngOnInit() {
+    this.IsCalling = false;
+  }
+
+  async buttonClick(){
+    this.IsCalling = true;
+    await this.generateEmail().catch((msg) => {
+      alert(msg);
+    });
+    this.IsCalling = false;
   }
 
   generateEmail(){
@@ -31,13 +41,13 @@ export class ReasonsPage implements OnInit {
        attachments: [
          
        ],
-       subject: 'Sick Leave',
-       body: "<!DOCTYPE html> <html> <head> </head> <body> <p>Hello Sir/Madam,</p> <p>I&rsquo;m emailing to inform you that I can&rsquo;t make it to work today, as I&rsquo;ve come down with cold. I'll be available to answer emails if you need urgent help.</p> <p>Thank you.</p> </body> </html>",
+       subject: this.messageSubject,
+       body: this.messageBody ,
        isHtml: true
      }
      
      // Send a text message using default options
-     this.emailComposer.open(email);
+     return this.emailComposer.open(email);
   }
 
 }
