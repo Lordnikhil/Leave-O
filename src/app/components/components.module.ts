@@ -6,18 +6,19 @@ import { AlertComponent } from './alert/alert.component';
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-    IonicModule.forRoot(),
-  ],
   declarations: [
     HeaderComponent,
     AlertComponent
   ],
+  providers:[AlertComponent],
+  entryComponents: [],
+  imports: [
+    CommonModule,
+    IonicModule.forRoot(),
+  ],
   exports: [
     HeaderComponent,
     AlertComponent
-  ],
-  entryComponents: [],
+  ]
 })
 export class ComponentsModule {}

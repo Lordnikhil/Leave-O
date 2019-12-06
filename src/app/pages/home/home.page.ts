@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, Platform } from '@ionic/angular';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { AlertComponent } from 'src/app/components/alert/alert.component';
 
 const nav = document.querySelector('ion-nav');
 
@@ -15,7 +16,7 @@ export class HomePage {
   statusBarColor: string;
   subscription: any;
 
-  constructor(public navCtrl: NavController, private statusBar: StatusBar, private platform: Platform) {
+  constructor(public navCtrl: NavController, private statusBar: StatusBar, private platform: Platform, private alrtCtrl: AlertComponent) {
     this.homePageTitle = "";
     this.statusBarColor = "#ffffff"; //white #ffffff
     this.statusBar.backgroundColorByHexString(this.statusBarColor);
@@ -36,7 +37,7 @@ export class HomePage {
   }
 
   showAlert(){
-    alert("Please select the other option");
+    this.alrtCtrl.presentAlert("Please select the other option");
   }
 
 }
